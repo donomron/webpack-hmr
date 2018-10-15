@@ -3,7 +3,7 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 const common = require('./webpack.common.js');
 
-const PORT_DEV_SERVER = 5080;
+const PORT_DEV_SERVER = 3000;
 
 // css rule
 const css = {

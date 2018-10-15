@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // javascript rule
 const javascript = {
@@ -7,8 +8,7 @@ const javascript = {
 	use: {
 		loader: 'babel-loader',
 		options: {
-			presets: ['env'],
-			plugins: ['transform-object-rest-spread'],
+			presets: ['@babel/preset-env']
 		}
 	}
 };
@@ -35,6 +35,12 @@ const config = {
 	watchOptions: {
 		ignored: /node_modules/,
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+		  template: './index.html',
+		  hash: true,
+		}),
+	]
 };
 
 module.exports = config;
