@@ -10,7 +10,6 @@ const css = {
   use: [
     MiniCssExtractPlugin.loader,
     'css-loader',
-    'postcss-loader'
   ],
 };
 
